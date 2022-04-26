@@ -24,7 +24,7 @@ body::before{
     font-size: 3rem !important;
 }
 ::placeholder{
-    font-size: 12px;
+    font-size: 16px;
 
 }
 .modal-email{
@@ -43,7 +43,7 @@ body::before{
     --invalid:red;
     --border-radius:4px;
     --input-border:1px;
-    --fed-fs:12px;
+    --fed-fs:16px;
     --fs:1rem;
     --placeholder-fs:11px
 }
@@ -51,7 +51,9 @@ body::before{
 
 
 
-
+p{
+    font-size: 1rem;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -113,6 +115,14 @@ body::before{
     border-radius: 0 0 var(--border-radius) var(--border-radius);
    
     
+    
+}
+.hero-form{
+    max-width: 600px;
+    margin: auto;
+}
+.hero-form>input,.hero-form>button{
+    height: 100%;
     
 }
 
