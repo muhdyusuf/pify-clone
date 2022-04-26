@@ -1,0 +1,206 @@
+body::before{
+    content: " ";
+    display: block;
+    height: 60px;
+    
+}
+
+
+.gradient-back{
+    background: rgb(192,233,212);
+    background: linear-gradient(196deg, rgba(192,233,212,0.9536178107606679) 0%, rgba(255,255,255,0) 46%);
+}
+.gradient-back1{
+    background: rgb(192,233,212);
+    background: linear-gradient(22deg, rgba(192,233,212,0.9536178107606679) 0%, rgba(255,255,255,0) 46%);
+}
+.card{
+    border: none;
+    background-color: transparent;
+}
+
+
+.bi{
+    font-size: 3rem !important;
+}
+::placeholder{
+    font-size: 12px;
+
+}
+.modal-email{
+    position: relative;
+}
+.modal-email::before{
+    display: block;
+    content: "sadda";
+    width: 100%;
+    height: 120%;
+    top: 10px;
+    background-color: brown;
+}
+:root{
+    --valid:green;
+    --invalid:red;
+    --border-radius:4px;
+    --input-border:1px;
+    --fed-fs:12px;
+    --fs:1rem;
+    --placeholder-fs:11px
+}
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.input-cont{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid gray;
+    border-radius: var(--border-radius);
+    
+  
+    
+}
+.placeholder{
+    
+    background-color: white;
+    font-size: var(--fs);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 .8rem;
+    pointer-events: none;
+    transition: height ease-in-out .3s,font-size ease-in-out .3s;
+    z-index: 1000000;
+    
+    
+}
+.valid-fed{
+    background-color: var(--valid);
+    height: 20%;
+    width: 100%;
+    font-size: var(--fed-fs);
+    display: var(--display);
+    padding: 3px .8rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    
+    
+    
+}
+.invalid-fed{
+    position: relative;
+    background-color: var(--invalid);
+    height: 100%;
+    width: 100%;
+    font-size: var(--fed-fs);
+    display: var(--display);
+    padding: 3px .8rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+   
+    
+    
+}
+
+.input-cont>input{
+    font-size: var(--fs);
+    padding: 1.5rem 1rem .4rem .7rem ;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    height: 100%;
+    border: none;
+    
+    
+    
+    
+}
+
+.email-input:placeholder-shown~.valid-fed,
+.email-input:not(:placeholder-shown):valid~.valid-fed,
+.email-input:not(:placeholder-shown):invalid~.invalid-fed,
+.email-input:placeholder-shown~.invalid-fed,
+.email-input:not(:placeholder-shown):invalid~.valid-fed,
+.email-input:not(:placeholder-shown):valid~.invalid-fed{
+    display: none;
+    
+}
+
+.email-input:not(:placeholder-shown):invalid:not(:focus)~.invalid-fed,
+.email-input:not(:placeholder-shown):valid:not(:focus)~.valid-fed{
+    display: block;
+    
+}
+.email-input:not(:placeholder-shown):invalid:not(:focus){
+
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-left: var(--input-border) solid var(--invalid);
+    border-right: var(--input-border) solid var(--invalid);
+    border-top: var(--input-border) solid var(--invalid);
+    
+}
+.email-input:not(:placeholder-shown):valid:not(:focus){
+    
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-left: var(--input-border) solid var(--valid);
+    border-right: var(--input-border) solid var(--valid);
+    border-top: var(--input-border) solid var(--valid);
+    
+}
+.email-input:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+.email-input:focus~.placeholder,
+.email-input:not(:placeholder-shown)~.placeholder{
+    font-size: var(--placeholder-fs);
+    height: 40%;
+}
+.custom-btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    border: 1px black solid;
+    
+
+
+}
+
+.custom-btn>i{
+ margin-bottom: 5px;
+   font-size: 20px !important;
+   color: white;
+   display: none;
+}
+.custom-btn:active>i{
+    display: block;
+}
+.custom-btn:hover{
+    background-color: grey;
+}
+.custom-btn:active{
+    background-color: black;
+}
