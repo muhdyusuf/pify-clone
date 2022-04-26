@@ -121,8 +121,8 @@ p{
     max-width: 600px;
     margin: auto;
 }
-.hero-form>input,.hero-form>button{
-    height: 100%;
+.hero-form>button{
+    padding: 1rem;
     
 }
 
